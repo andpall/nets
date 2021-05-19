@@ -1,0 +1,9 @@
+extends ../layout
+
+block content
+  each student in students
+    include ../components/student
+    if updating == student.id
+      include ../forms/update/update-student
+    hr
+  include ../forms/create/create-student

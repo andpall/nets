@@ -1,0 +1,9 @@
+extends ../layout
+
+block content
+    each cathedra in cathedras
+      include ../components/cathedra
+      if updating == cathedra.id
+        include ../forms/update/update-cathedra
+      hr
+    include ../forms/create/create-cathedra

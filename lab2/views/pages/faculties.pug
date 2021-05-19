@@ -1,0 +1,9 @@
+extends ../layout
+
+block content
+  each faculty in faculties
+    include ../components/faculty
+    if updating == faculty.id
+      include ../forms/update/update-faculty
+    hr
+  include ../forms/create/create-faculty

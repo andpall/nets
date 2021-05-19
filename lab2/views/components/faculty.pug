@@ -1,0 +1,11 @@
+extends ../component
+
+block content
+  span #{faculty.name}
+  br
+  a(href=`/cathedras?facultyId=${faculty.id}`) Cathedras
+  br
+  a(href=`/groups?facultyId=${faculty.id}`) Groups
+  br
+  a(href=`/faculties?updating=${faculty.id}` class='button') Update
+  a(href=`/faculties?facultyId=${faculty.id}&_method=DELETE` class='button') Delete

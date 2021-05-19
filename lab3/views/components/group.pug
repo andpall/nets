@@ -1,0 +1,9 @@
+extends ../component
+
+block content
+  span #{group.number}
+  br
+  a(href=`/students?groupId=${group.id}`) Students
+  br
+  a(href=`/groups?facultyId=${facultyId}&updating=${group.id}` class='button') Update
+  a(href=`/groups?facultyId=${facultyId}&groupId=${group.id}&_method=DELETE` class='button') Delete
